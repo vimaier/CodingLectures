@@ -23,7 +23,7 @@ class Test(unittest.TestCase):
 
         calculated_result = square_wave.calculate_square_wave_for(list_of_t, num_sine_osc)
 
-        self.assertTrue((assumed_result == calculated_result).all(), "Results are not equal")
+        self.assertTrue(np.allclose(assumed_result, calculated_result), "Results are not equal")
 
     def test_for_fail(self):
         wrong_result = np.zeros(10)

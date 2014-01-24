@@ -40,9 +40,9 @@ def calculate_square_wave_for(list_of_t, num_sine_osc):
     two_k_minus_one = 2*k - 1
 
     for i, t in enumerate(list_of_t):
-        result[i] = np.sum(np.sin( two_k_minus_one*t ) / (two_k_minus_one*np.pi) )
+        result[i] = np.sum(np.sin( two_k_minus_one*t ) / (two_k_minus_one) )
 
-    return 4 * result
+    return 4/np.pi * result
 
 
 #===================================================================================================
